@@ -1,3 +1,10 @@
+# tmp
+tmp.py
+*.md
+
+# pdf
+*.pdf
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
