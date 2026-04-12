@@ -136,7 +136,7 @@ def run_mode2():
         if not match:
             reason = '키 형식 오류'
             print(f'  [FAIL] {reason}: {pattern_id}')
-            failed_cases.append(pattern_id, reason)
+            failed_cases.append((pattern_id, reason))
             continue
 
         n = int(match.group(1))
