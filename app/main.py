@@ -77,11 +77,13 @@ def run_mode1():
     score_a = mac(pattern, filter_a)
     score_b = mac(pattern, filter_b)
     result = judge(score_a, score_b)
-    avg_ms = measure_time(pattern, filter_a)
+    avg_a_ms = measure_time(pattern, filter_a)
+    avg_b_ms = measure_time(pattern, filter_a)
 
     print_div(3, 'MAC 결과')
     print(f'A 점수: {score_a}\nB 점수: {score_b}')
-    print(f'연산 시간(평균/{REPEAT}회): {avg_ms:.3f} ms')
+    print(f'A 연산 시간: {avg_a_ms:.3f} ms\nB 연산 시간: {avg_b_ms:.3f} ms')
+
     if result == 'UNDECIDED':
         print(f'판정: 판정 불가 (|A-B| < {EPSILON})')
     else:
